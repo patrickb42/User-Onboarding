@@ -8,7 +8,7 @@ const NewUserForm = ({ values, errors, touched, status }) => {
   const [users, setUsers] = useState([]);
   
   useEffect(() => {
-    status && setUsers([...users, status]);
+    status && setUsers((users) => [...users, status]);
   }, [status]);
 
   return (<>
