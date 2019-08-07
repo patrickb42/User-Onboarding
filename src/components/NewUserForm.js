@@ -44,6 +44,7 @@ export default withFormik({
 
   validationSchema: Yup.object().shape({
     name: Yup.string()
+      .max(255, "Your name isn't that long")
       .required('Name is required'),
     email: Yup.string()
       .email('Email not valid')
