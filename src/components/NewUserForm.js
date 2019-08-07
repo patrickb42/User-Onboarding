@@ -12,8 +12,6 @@ const NewUserForm = ({ values, errors, touched, status }) => {
   }, [status]);
 
   return (<>
-    {console.log(status)}
-    {console.log(users)}
     <Form>
       {touched.name && errors.name && <p>{errors.name}</p>}
       <Field type="text" name="name" placeholder="Name" />
